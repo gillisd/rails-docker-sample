@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y build-essential libpq-dev
 RUN mkdir /gratr
 WORKDIR /gratr
 
-ADD Gemfile /gratr/Gemfile
-ADD Gemfile.lock /gratr/Gemfile.lock
+ADD ../Gemfile /gratr/Gemfile
+ADD ../Gemfile.lock /gratr/Gemfile.lock
 RUN bundle install
 
 # Finally, add the rest of our app's code
